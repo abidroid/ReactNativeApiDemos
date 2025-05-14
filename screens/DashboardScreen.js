@@ -24,7 +24,7 @@ const DashboardScreen = ({ navigation }) => {
             </Pressable>
 
 
-            <Pressable onPress={() => navigation.navigate("T20Landing")} >
+            <Pressable onPress={() => navigation.navigate("DummyJSON")} >
 
                 <View style={styles.rowItem}>
 
@@ -35,6 +35,24 @@ const DashboardScreen = ({ navigation }) => {
                     <View>
                         <Text style={styles.title}>Dummy JSON</Text>
                         <Text style={styles.subTitle}>Products, Recipes, Auth</Text>
+                    </View>
+
+
+                </View>
+
+            </Pressable>
+
+            <Pressable onPress={() => navigation.navigate("MovieSearch")} >
+
+                <View style={styles.rowItem}>
+
+                    <View style={styles.circularItem}>
+                        <Text>2</Text>
+                    </View>
+
+                    <View>
+                        <Text style={styles.title}>OMDB API</Text>
+                        <Text style={styles.subTitle}>Search Movie</Text>
                     </View>
 
 
