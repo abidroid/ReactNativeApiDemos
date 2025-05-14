@@ -1,4 +1,4 @@
-import { FlatList, View, Text, StyleSheet } from "react-native";
+import { FlatList, View, Text, StyleSheet, ImageBackground } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
 
 const T20LandingScreen = ({ navigation }) => {
@@ -25,17 +25,31 @@ const T20LandingScreen = ({ navigation }) => {
 
 
     return (
-        <FlatList
-            data={DATA}
-            renderItem={renderItem}
-            numColumns={2}
-            contentContainerStyle={styles.container}
+        <ImageBackground
+        source={require('../../assets/t20/bg.jpeg')
+        }
+                style={styles.background}
+                resizeMode="cover"
 
-        />
+        >
+
+            <FlatList
+                data={DATA}
+                renderItem={renderItem}
+                numColumns={2}
+                contentContainerStyle={styles.container}
+
+            />
+        </ImageBackground>
+
+
     );
 };
 
 const styles = StyleSheet.create({
+    background: {
+        flex: 1,
+    },
     container: { padding: 16 },
     itemCard: {
         flex: 1,
@@ -43,9 +57,11 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         margin: 8,
         alignItems: 'center',
-        height: 150,
+        height: 180,
         borderRadius: 16,
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        borderColor: 'purple',
+        borderWidth: 1
     },
     itemText: { fontSize: 20 },
 });
