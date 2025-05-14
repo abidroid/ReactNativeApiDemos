@@ -47,7 +47,7 @@ const DashboardScreen = ({ navigation }) => {
                 <View style={styles.rowItem}>
 
                     <View style={styles.circularItem}>
-                        <Text>2</Text>
+                        <Text>3</Text>
                     </View>
 
                     <View>
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         width: 50,
         height: 50,
         borderRadius: '50%',
-        backgroundColor: "yellow",
+        backgroundColor: "#CCCCCC",
         alignItems: 'center',
         justifyContent: 'center'
     },
