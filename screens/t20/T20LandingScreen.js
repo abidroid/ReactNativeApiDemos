@@ -16,7 +16,7 @@ const T20LandingScreen = ({ navigation }) => {
     const Item = ({ item }) => {
         return (
             <View style={styles.itemCard}>
-                <MaterialIcons name={item.iconName} size={78} color="pink" />
+                <MaterialIcons name={item.iconName} size={78} color="purple" />
                 <Text style={styles.itemText}>{item.title}</Text>
             </View>
         );
