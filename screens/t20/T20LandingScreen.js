@@ -26,12 +26,9 @@ const T20LandingScreen = ({ navigation }) => {
 
     return (
         <ImageBackground
-        source={require('../../assets/t20/bg.jpeg')
-        }
-                style={styles.background}
-                resizeMode="cover"
-
-        >
+            source={require('../../assets/t20/bg.jpeg')}
+            style={styles.background}
+            resizeMode="cover">
 
             <FlatList
                 data={DATA}
@@ -63,6 +60,6 @@ const styles = StyleSheet.create({
         borderColor: 'purple',
         borderWidth: 1
     },
-    itemText: { fontSize: 20 },
+    itemText: { fontSize: 20, fontWeight: 'bold' },
 });
 export default T20LandingScreen;
