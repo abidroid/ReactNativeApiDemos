@@ -20,6 +20,6 @@ const RootNavigator = () => {
 
         />
     </Stack.Navigator>);
-}
+};
 
 export default RootNavigator;
