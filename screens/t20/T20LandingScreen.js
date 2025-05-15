@@ -1,4 +1,4 @@
-import { FlatList, View, Text, StyleSheet, ImageBackground } from "react-native";
+import { FlatList, View, Text, StyleSheet, ImageBackground, Pressable, Alert } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
 
 const T20LandingScreen = ({ navigation }) => {
@@ -15,10 +15,14 @@ const T20LandingScreen = ({ navigation }) => {
 
     const Item = ({ item }) => {
         return (
-            <View style={styles.itemCard}>
+            <Pressable style={styles.itemCard}
+                onPress={() => { Alert.alert('good'); }}
+            >
+
                 <MaterialIcons name={item.iconName} size={78} color="purple" />
                 <Text style={styles.itemText}>{item.title}</Text>
-            </View>
+
+            </Pressable>
         );
     }
     const renderItem = ({ item }) => <Item item={item} />;
@@ -56,10 +60,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         height: 180,
         borderRadius: 16,
+        flexDirection: 'column',
         justifyContent: 'space-around',
+        alignItems: 'center',
         borderColor: 'purple',
         borderWidth: 1
     },
-    itemText: { fontSize: 20, fontWeight: 'bold' },
+    itemText: { fontSize: 20, fontWeight: 'bold', textAlign: 'center' },
 });
 export default T20LandingScreen;

@@ -1,5 +1,6 @@
 
 import { View, Text, Pressable, StyleSheet, ScrollView } from "react-native";
+
 const DashboardScreen = ({ navigation }) => {
 
     return (
