@@ -4,10 +4,10 @@ import { MaterialIcons } from '@expo/vector-icons';
 const T20LandingScreen = ({ navigation }) => {
 
     const DATA = [
-        { id: '1', title: 'Schedule', iconName: "schedule", to: 'ScheduleScreen' },
-        { id: '2', title: 'Venues', iconName: "home", to: 'VenueScreen' },
-        { id: '3', title: 'History', iconName: "history", to: 'HistoryScreen' },
-        { id: '4', title: 'Teams', iconName: "group", to: 'TeamScreen' },
+        { id: '1', title: 'Schedule', iconName: "schedule", to: 'T20Schedule' },
+        { id: '2', title: 'Venues', iconName: "home", to: 'T20Venues' },
+        { id: '3', title: 'History', iconName: "history", to: 'T20History' },
+        { id: '4', title: 'Teams', iconName: "group", to: 'T20Teams' },
         { id: '5', title: 'Live Score', iconName: "scoreboard", to: 'LiveScore' },
         { id: '6', title: 'Highlights', iconName: "tv", to: 'Highlights' },
     ];
@@ -16,7 +16,7 @@ const T20LandingScreen = ({ navigation }) => {
     const Item = ({ item }) => {
         return (
             <Pressable style={styles.itemCard}
-                onPress={() => { Alert.alert('good'); }}
+                onPress={() => { navigation.navigate(item.to); }}
             >
 
                 <MaterialIcons name={item.iconName} size={78} color="purple" />
